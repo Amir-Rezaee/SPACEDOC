@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" %>
 <%@ Register Src="~/controls/meta.ascx" TagName="meta" TagPrefix="meta_uc" %>
 <%@ Register Src="~/controls/header.ascx" TagName="header" TagPrefix="header_uc" %>
-<%@ Register Src="~/controls/statistics.ascx" TagName="statistics" TagPrefix="statistics_uc" %>
+<%--<%@ Register Src="~/controls/statistics.ascx" TagName="statistics" TagPrefix="statistics_uc" %>--%>
 <%@ Register Src="~/controls/enquiry.ascx" TagName="enquiry" TagPrefix="enquiry_uc" %>
 <!DOCTYPE HTML>
 <html>
@@ -71,7 +71,7 @@
 
     </section>
  
-<statistics_uc:statistics ID="statistics" runat="server" />
+<%--<statistics_uc:statistics ID="statistics" runat="server" />--%>
 <script src="/js/script.js"></script>
 </body>
 </html>
