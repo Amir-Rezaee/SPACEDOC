@@ -17,6 +17,16 @@
 }
 .grid_2 {
   width: 15%;
+  width: calc(( 100% / 6 ) - 10px );
+  margin-right: 12px;
+  padding: 20px 8px;
+  border-top-right-radius: 20px;
+text-align: center;
+min-height: 250px;
+	transition: 0.5s all;
+}
+.grid_2:hover{
+	box-shadow: 5px 5px 5px #494949;
 }
 .grid_3 {
   width: 25%;
@@ -24,7 +34,9 @@
   margin-right: 20px;
 }
 .grid_4 {
-  width: 32%;
+  width: 33.33%;
+  width: calc(33.33% - 20px);
+  margin-right: 30px;
 }
 .grid_5 {
   width: 40.5%;
@@ -33,6 +45,9 @@
   width: 48%;
   width: calc(50% - 30px);
   margin-right: 60px;
+}
+.half{
+	width: 50%;
 }
 .grid_7 {
   width: 57.5%;
@@ -63,7 +78,8 @@
 .grid_9,
 .grid_10,
 .grid_11,
-.grid_12 {
+.grid_12,
+.half{
   float: left;
   display: block;
   position: relative;
@@ -111,7 +127,7 @@ select:focus {
 }
 /* General */
 html {
-  font-size: 18px;
+  font-size: 16px;
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -138,13 +154,16 @@ h5 {
   font-weight: 600;
   color: #000000;
 }
+
 p {
   text-align: left;
   margin: 0;
   padding-bottom: 30px;
   color: #000000;
-  line-height: 1.5rem;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
 }
+
 h1 {
   font-size: 34px;
   font-size: 1.88rem;
@@ -185,7 +204,7 @@ h2 {
 }
 h3 {
   font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 40px;
 }
 h4 {
@@ -275,8 +294,9 @@ nav {
   -o-transition: 0.5s all;
 }
 
-#page-aboutus #nav li a.aboutus {
+#page-aboutus #nav li a.aboutus, #page-healthcheck #nav li a.healthcheck, #page-spaceadvocate #nav li a.spaceadvocate  {
   color: #c01900;
+	cursor: inherit;
 }
 
 .header_change_bg #nav li a {
@@ -604,7 +624,7 @@ section {
 }
 .p_img {
   display: inline-block;
-  width: 130px;
+  width: 160px;
 }
 .btn {
   padding: 15px 25px;
@@ -636,6 +656,102 @@ section {
   color: #c01900;
   padding: 15px 0;
 }
+.row{
+	display: block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 100px;
+}
+ul.det {
+	list-style: outside;
+	color: #000000;
+	line-height: 1.4rem;
+	margin-left: 18px;
+ 
+}
+.step{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.3rem;
+	color: #ffffff;
+	text-align: center;
+	display: block;
+	padding: 10px;
+	font-weight: bold;
+	border-top-right-radius: 10px;
+} 
+#page-healthcheck .step.one{
+	background-color: #ff9999;
+}
+#page-healthcheck .step.two{
+	background-color: #ff5050;
+}
+#page-healthcheck .step.three{
+	background-color: #c00000;
+}
+
+.pop_up{
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(255,255,255,0.9);
+	display: none;
+}
+
+.close_pop_up{
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	top: 30px;
+	right: 30px;
+}
+
+.pop_up_content {
+    display: block;
+    position: absolute;
+    width: 100vh;
+    max-width: 90%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.tt{
+	display: block;
+	width: 50px;
+	padding-bottom: 20px;
+	margin: auto;
+}
+
+.grid_2 p{
+	color: #ffffff;
+	text-align: center;
+	padding-bottom: 0;
+}
+.grid_2 p.bold{padding-bottom: 20px;}
+
+.grid_2.one{
+	background-color: #494949
+}
+.grid_2.two{
+	background-color: #7c7c7c
+}
+.grid_2.three{
+	background-color: #2e5d87
+}
+.grid_2.four{
+	background-color: #466e92
+}
+.grid_2.five{
+	background-color: #2e74b6
+}
+.grid_2.six{
+	background-color: #0199ff;
+}
 
 @media screen and (hover: hover) {
   .btn:hover {
@@ -646,11 +762,30 @@ section {
 /*-------------------------------------*/
 /*-------------------------------------*/
 /*-------------------------------------*/
+.fs_small{
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+.bold{
+	font-weight: bold;
+}
+.uppercase{
+	text-transform: uppercase;
+}
+.fs_medium{
+	font-size: 1.1rem
+}
 .centeralign {
   text-align: center;
 }
 .red {
   color: #c01900;
+}
+.blue{
+	color: #00adef;
+}
+.green{
+	color: #009900;
 }
 .bg_white {
   background-color: #ffffff;
@@ -662,6 +797,9 @@ section {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.bg_size_75{
+	background-size: 75%;
 }
 
 .pt100 {
@@ -729,6 +867,18 @@ section {
 }
 .fw600 {
   font-weight: 600;
+}
+.leftfloat{
+	float: left;
+}
+.rightfloat{
+	float: right;
+}
+.mw1100{
+	width: 1100px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 90%;
 }
 
 @media screen and (max-width: 1024px) {
