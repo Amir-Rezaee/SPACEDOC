@@ -155,8 +155,6 @@
     <section class=" pt100 pb100 centeralign">
         <a class="btn mlra">START A CONVERSATION</a>
     </section>
-
-    <%--<statistics_uc:statistics ID="statistics" runat="server" />--%>
     <script src="/js/script.js"></script>
 </body>
 </html>
